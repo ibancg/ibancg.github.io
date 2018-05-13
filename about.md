@@ -4,12 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+I am an engineer with big interest - and some experience - in Computer Science, Applied Mathematics and Acoustics. This blog collects some of my thoughts and interests as a set of posts written in my spare time.
