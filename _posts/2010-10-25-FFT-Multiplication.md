@@ -78,16 +78,16 @@ where the extra operations have all order $$O(n)$$.
 
 Starting from the original code, some functions have been added: FFT and inverse FFT computation functions, in the files [fft.h](https://github.com/ibancg/bignumbers/blob/1.0.1/fft.h) and [fft.c](https://github.com/ibancg/bignumbers/blob/1.0.1/fft.c). Also, the memory allocation is now dynamic in order to deal with really huge numbers; furthermore, the show() function has been improved in such a way that it only prints the most and less significant digits with very big numbers, while the whole computation is dumped to the file *output.txt*.
 
-To test the new multiplication algorithm, the program evaluates the largest known prime number at the moment this post was written, [the Mersenne prime](https://en.wikipedia.org/wiki/Mersenne_prime) $$2^{43,112,609}-1$$, with $$12,978,189$$ digits. You no longer need to modify `BigNumber::N_DIGITS`, it will automatically adapt to the selected exponent. In this case, we need $$2^{24} = 16,777,216$$ figures - must be power of 2 - to compute a number with 13 million digits.
+To test the new multiplication algorithm, the program evaluates the largest known prime number at the moment this post was written, [the Mersenne prime](https://en.wikipedia.org/wiki/Mersenne_prime) $$2^{43,112,609}-1$$, with 12,978,189 digits. You no longer need to modify `BigNumber::N_DIGITS`, it will automatically adapt to the selected exponent. In this case, we need $$2^{24}$$ = 16,777,216 figures - must be power of 2 - to compute a number with 13 million digits.
 
-The algorithm used to obtain the Mersenne number is detailed in the source code. You will need a few minutes and 1,3 GB of RAM memory to run the program with the current configuration in a normal - as of 2010 - computer. If that’s too long for you, you can compute a cheaper Mersenne prime, e.g. the number $$2^{3,021,377}-1$$ (with $$909,526$$ digits), in a few seconds.
+The algorithm used to obtain the Mersenne number is detailed in the source code. You will need a few minutes and 1,3 GB of RAM memory to run the program with the current configuration in a normal - as of 2010 - computer. If that’s too long for you, you can compute a cheaper Mersenne prime, e.g. the number $$2^{3,021,377}-1$$ (with 909,526 digits), in a few seconds.
 
-Take a look to those humongous numbers to get an idea of what we are talking about. Find below the execution output for both of them in raw text formatted to 75 columns. Do you imagine how hard must be to proof that any of them is indeed a prime number?
+Take a look to those humongous numbers to get an idea of what we are talking about. Find below the execution output for both of them in raw text formatted to 75 columns. Can you imagine how hard it must be to proof that they are indeed prime numbers?
 
 * [Output for Mersenne prime number $$2^{3,021,377}-1$$](/images/mersenne-3021377.zip)
 * [Output for Mersenne prime number $$2^{43,112,609}-1$$](/images/mersenne-43112609.zip)
 
-It is possible to do some improvements with parallelization and a more dynamic memory allocation, but that’s beyond the range of this post. In future posts, we’ll present some algorithms to perform more complicated mathematical operations, like square roots.
+It is possible to aplly some improvements with parallelization and a more dynamic memory allocation, but that’s beyond the scope of this post. In future articles we will introduce algorithms to perform more complicated mathematical operations, like square roots.
 
 ## Links
 
